@@ -1,8 +1,17 @@
-Qs https://leetcode.com/problems/string-to-integer-atoi
+//Qs https://leetcode.com/problems/string-to-integer-atoi
 
 
 class Solution {
-    public int myAtoi(String str) {
+    public static void main(String[] args) {
+        String str = " -213445";
+        String  s1 = " +98";// output = 98
+        String s2 = "-"; // output = 0
+        String s3 = "-2147483647";// output = -2147483647 its less than Integer.MIN_VALUE= -2147483648
+        String s4 = "2147483647"; // output = 2147483647= INteger.MAX_VALUE
+        String s5 = "1111122223334";
+        System.out.println(myAtoi(str));
+    }
+    public static int myAtoi(String str) {
          boolean negetive = false; // to see if input is negetive
         String noInput="";
         
